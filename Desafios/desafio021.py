@@ -1,6 +1,3 @@
-import os
-os.environ["SDL_AUDIODRIVER"] = "dummy"  # Força driver de áudio fake
-
 import pygame
 
 pygame.init()
