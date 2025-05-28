@@ -1,9 +1,0 @@
-nome: Blake
-level: 2
-dano: 25
-hp: 120
-hp_max: 120
-exp: 21
-exp_max: 60
-gold: 0
-arma: Espada de madeira
