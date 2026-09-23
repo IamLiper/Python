@@ -103,57 +103,57 @@
 # idade = ler_idade()
 # print(f"Idade válida: {idade}")
 
-# Desafio 6
+# # Desafio 6
 
-def validar_idade(idade):
-    if idade < 18:
-        return False, "A idade minima é 18 anos."
-    elif idade > 120:
-        return False, "A idade maxima é 120 anos."
-    else:
-        return True, "Idade válida."
+# def validar_idade(idade):
+#     if idade < 18:
+#         return False, "A idade minima é 18 anos."
+#     elif idade > 120:
+#         return False, "A idade maxima é 120 anos."
+#     else:
+#         return True, "Idade válida."
 
-def ler_idade():
-    while True:
-        try:
-            idade = int(input("Digite a sua idade: "))
-            valido, mensagem = validar_idade(idade)
-            if valido:
-                return idade
-            else:
-                print(mensagem)
+# def ler_idade():
+#     while True:
+#         try:
+#             idade = int(input("Digite a sua idade: "))
+#             valido, mensagem = validar_idade(idade)
+#             if valido:
+#                 return idade
+#             else:
+#                 print(mensagem)
 
-        except ValueError:
-            print("Digite apenas numeros.")
+#         except ValueError:
+#             print("Digite apenas numeros.")
 
-# Desafio 7
+# # Desafio 7
 
-def validar_nome(nome):
-    leitura = len(nome)
-    if leitura >= 3:
-        return True, "Nome, válido."
-    elif leitura == 0:
-        return False, "O nome não pode estar vazio."
-    else:
-        return False, "O nome deve ter pelo menos 3 caracteres."
+# def validar_nome(nome):
+#     leitura = len(nome)
+#     if leitura >= 3:
+#         return True, "Nome, válido."
+#     elif leitura == 0:
+#         return False, "O nome não pode estar vazio."
+#     else:
+#         return False, "O nome deve ter pelo menos 3 caracteres."
 
-def ler_nome():
-    while True:
-            nome = input("Digite o seu nome: ")
-            valido, mensagem = validar_nome(nome)
-            if valido:
-                return nome
-            else:
-                print(mensagem)
+# def ler_nome():
+#     while True:
+#             nome = input("Digite o seu nome: ")
+#             valido, mensagem = validar_nome(nome)
+#             if valido:
+#                 return nome
+#             else:
+#                 print(mensagem)
 
 
-# Desafio 8
-def cadastrar_usuario():
-    nome = ler_nome()
-    idade = ler_idade()
-    usuario = {"nome": nome, "idade": idade}
+# # Desafio 8
+# def cadastrar_usuario():
+#     nome = ler_nome()
+#     idade = ler_idade()
+#     usuario = {"nome": nome, "idade": idade}
 
-    return usuario
+#     return usuario
 
 # # Desafio 9
 # def cadastrar_usuarios():
@@ -170,46 +170,48 @@ def cadastrar_usuario():
 #         else:
 #             print("Opção inválida, tente novamente.")
 
-# Desafio 10
+# # Desafio 10
 
-def listar_usuarios(usuarios):
-    encontrados = []
-    for usuario in usuarios:
-        encontrados.append(usuario)
-    return encontrados
+# def listar_usuarios(usuarios):
+#     for usuario in usuarios:
+#         print(f"Nome: {usuario['nome']}\nIdade: {usuario['idade']}")
 
-def buscar_usuario(usuarios, nome):
-    for usuario in usuarios:
-        if nome == usuario['nome']:
-            return usuario
+# def buscar_usuario(usuarios, nome):
+#     for usuario in usuarios:
+#         if nome == usuario["nome"]:
+#             return True, usuario
+#     else:
+#         return False, usuario
 
 
-def sistema_usuario():
-    usuarios = []
+# def sistema_usuario():
+#     usuarios = []
 
-    while True:
-        print("\n=== SISTEMA DE USUÁRIOS ===\n")
-        print("""
-1 - Cadastrar usuário
-2 - Listar usuários
-3 - Buscar usuário
-4 - Sair
-""")
-        resposta = input("escolha uma opção: (1 a 4)")
+#     while True:
+#         print("\n=== SISTEMA DE USUÁRIOS ===\n")
+#         print("""
+# 1 - Cadastrar usuário
+# 2 - Listar usuários
+# 3 - Buscar usuário
+# 4 - Sair
+# """)
+#         resposta = input("escolha uma opção: (1 a 4)")
 
-        if resposta == '1':
-            usuarios.append(cadastrar_usuario())
-        elif resposta == '2':
-            lista = listar_usuarios(usuarios)
-            print(lista)
-        elif resposta == '3':
-            nome = ler_nome()
-            encontrado = buscar_usuario(usuarios, nome)
-            print(f"Nome: {encontrado}")
-        elif resposta == '4':
-            print("Encerrando cadastro...")
-            break
-        else:
-            print("Digite uma opeção válida, tente novamente.;")
+#         if resposta == '1':
+#             usuarios.append(cadastrar_usuario())
+#         elif resposta == '2':
+#             listar_usuarios(usuarios)
+#         elif resposta == '3':
+#             nome = input("Digite o nome a ser buscado: ")
+#             valido, retorno = buscar_usuario(usuarios, nome)
+#             if valido == False:
+#                 print("Usuario não encontrado.")
+#             else:
+#                 print(f"Nome: {retorno}")
+#         elif resposta == '4':
+#             print("Encerrando cadastro...")
+#             break
+#         else:
+#             print("Digite uma opeção válida, tente novamente.;")
 
-sistema_usuario()
+# sistema_usuario()
