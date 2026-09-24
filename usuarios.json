@@ -5,12 +5,7 @@
         "profissao": "Programador"
     },
     {
-        "nome": "Maria",
-        "idade": 25,
-        "profissao": "Designer"
-    },
-    {
-        "nome": "João",
+        "nome": "Joao",
         "idade": 24,
         "profissao": "Engenheiro"
     }
